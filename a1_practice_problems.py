@@ -29,7 +29,7 @@ def absolute(n: int) -> int:
     """
     if n < 0:
         return -1 * n
-    else
+    else:
         return n
     
     
@@ -135,6 +135,7 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
 # this line causes the nested code to be skipped if the file is imported instead of run
 if __name__ == "__main__":
     assert absolute(-1) == 1, "absolute of -1 failed"
+    assert absolute(5) == 5, "absolute of 5 failed"
     assert factorial(4) == 24, "factorial of 4 failed"
     assert every_other([1, 2, 3, 4, 5]) == [
         1,
