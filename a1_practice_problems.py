@@ -56,7 +56,7 @@ def factorial(n: int) -> int:
 T = TypeVar("T")
 
 
-def every_other(lst: List[T]) -> List[T]:
+def every_other(lst):
     """Takes a list and returns a list of every other element in the list, starting with
     the first.
 
@@ -67,10 +67,16 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    raise NotImplementedError("every_other")
+    i = 0
+    newList = []
+    for item in lst:
+        if lst.index(item) % 2 == 0:
+            newList.append(item)
+            
+    return newList
 
 
-def sum_list(lst: List[int]) -> int:
+def sum_list(lst: list[int]) -> int:
     """Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
     use the built in function `sum`.
 
@@ -80,10 +86,14 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
+    sum = 0
+    for item in lst:
+        sum = sum + item
+    
+    return sum
 
 
-def mean(lst: List[int]) -> float:
+def mean(lst: list[int]) -> float:
     """Takes a list of numbers, and returns the mean of the numbers.
 
     Args:
@@ -92,7 +102,10 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    mean = 0
+    for item in lst:
+        mean = mean + item
+    return(mean/len(lst))
 
 
 def median(lst: List[int]) -> float:
