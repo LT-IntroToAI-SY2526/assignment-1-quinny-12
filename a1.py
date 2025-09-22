@@ -20,275 +20,156 @@ Remember: The goal is to LEARN, not just get working code!
 
 """
 MY ORIGINAL AI PROMPT:
-I'm learning Python basics in a high school programming class. I have some experience 
-with JavaScript and Java (but have not used Java in some time). I have taken a programming 
-1 class in Java and AP Computer Science Principles in JavaScript, and am currently taking 
-AP Computer Science A in Java. I have never before used Java. Can you create 5-7 practice 
-problems that cover: > - Variables and basic data types > - Conditionals (if/elif/else) > 
-- Loops (for and while) > - Functions > - Basic list operations >  > Make them 
-progressively more challenging. Make sure each problem has clear instructions and example 
-inputs/outputs.
+I'm learning Python basics in a high school programming class. 
+I have some experience  with JavaScript and Java (but have not 
+used Java in some time). I have taken a programming  1 class in
+Java and AP Computer Science Principles in JavaScript, and am 
+currently taking  AP Computer Science A in Java. I have never 
+before used Java. Can you create 5-7 practice  problems that cover: 
+> - Variables and basic data types > - Conditionals (if/elif/else) >  
+- Loops (for and while) > - Functions > - Basic list operations >  > 
+Make them relatively simple because I'm completely new to Python, but
+still complex enough that I can gain a deeper understanding of Python. 
+Make sure each problem has clear instructions and example inputs/outputs. 
+Each problem should make me write the program as a function with or 
+without parameters.
 """
 
 # =============================================================================
 # PART 2: AI-GENERATED PROBLEMS & SOLUTIONS
 # =============================================================================
 
-"""
-# Python Practice Problems: Variables to Lists
+# Python Basics Practice Problems
 
-## Problem 1: Temperature Converter (Variables & Conditionals)
-**Concepts**: Variables, basic data types, if/elif/else statements, input/output
-
-Write a program that converts temperatures between Celsius and Fahrenheit. The program should:
-1. Ask the user for a temperature value and the unit (C or F)
-2. Convert the temperature to the other unit
-3. Display the result with appropriate formatting
-
-**Formulas:**
-- Celsius to Fahrenheit: F = (C × 9/5) + 32
-- Fahrenheit to Celsius: C = (F - 32) × 5/9
-
-**Example Input/Output:**
-```
-Enter temperature: 25
-Enter unit (C/F): C
-25.0°C is equal to 77.0°F
-
-Enter temperature: 68
-Enter unit (C/F): F
-68.0°F is equal to 20.0°C
-
-
-```
-
----
-
-## Problem 2: Number Guessing Game (Loops & Conditionals)
-**Concepts**: while loops, conditionals, variables, random numbers
-
-Create a number guessing game where:
-1. The program generates a random number between 1 and 100
-2. The user has to guess the number
-3. After each guess, provide feedback ("Too high", "Too low", or "Correct!")
-4. Count and display the number of attempts when the user wins
-5. The game continues until the correct number is guessed
-
-**Example Input/Output:**
-```
-I'm thinking of a number between 1 and 100!
-Enter your guess: 50
-Too high! Try again.
-Enter your guess: 25
-Too low! Try again.
-Enter your guess: 37
-Too high! Try again.
-Enter your guess: 31
-Correct! You guessed it in 4 attempts!
-```
-
-**Hint:** Use `import random` and `random.randint(1, 100)`
-
----
-
-## Problem 3: Grade Calculator (Functions & Lists)
-**Concepts**: Functions, lists, for loops, conditionals
-
-Write a program with the following functions:
-1. `calculate_average(grades)` - takes a list of grades and returns the average
-2. `get_letter_grade(average)` - converts a numerical average to a letter grade
-3. `main()` - handles user input and displays results
-
-**Grading Scale:**
-- A: 90-100
-- B: 80-89
-- C: 70-79
-- D: 60-69
-- F: Below 60
-
-**Example Input/Output:**
-```
-How many grades do you want to enter? 4
-Enter grade 1: 85
-Enter grade 2: 92
-Enter grade 3: 78
-Enter grade 4: 88
-
-Grades: [85, 92, 78, 88]
-Average: 85.75
-Letter Grade: B
-```
-
----
-
-## Problem 4: Word Frequency Counter (Lists & Loops)
-**Concepts**: Lists, dictionaries, for loops, string methods, functions
-
-Create a program that analyzes text and counts word frequency:
-1. Ask the user to enter a sentence
-2. Convert the sentence to lowercase and split into words
-3. Remove punctuation from words
-4. Count how many times each word appears
-5. Display the results sorted by frequency (highest first)
-
-**Example Input/Output:**
-```
-Enter a sentence: The quick brown fox jumps over the lazy dog. The dog was very lazy!
-
-Word Frequency:
-the: 3
-lazy: 2
-dog: 2
-quick: 1
-brown: 1
-fox: 1
-jumps: 1
-over: 1
-was: 1
-very: 1
-```
-
-**Hints:** 
-- Use `.lower()`, `.split()`, and `.strip(".,!?")` methods
-- Consider using a dictionary to store word counts
-
----
-
-## Problem 5: Shopping List Manager (Functions & List Operations)
-**Concepts**: Lists, functions, while loops, conditionals, list methods
-
-Create a shopping list program with a menu system:
-1. Add item to list
-2. Remove item from list
-3. View current list
-4. Clear entire list
-5. Search for an item
-6. Exit
-
-The program should handle invalid menu choices and continue running until the user chooses to exit.
-
-**Example Input/Output:**
-```
-=== Shopping List Manager ===
-1. Add item
-2. Remove item
-3. View list
-4. Clear list
-5. Search for item
-6. Exit
-
-Choose an option (1-6): 1
-Enter item to add: apples
-Added 'apples' to your list.
-
-Choose an option (1-6): 1
-Enter item to add: bread
-Added 'bread' to your list.
-
-Choose an option (1-6): 3
-Your shopping list:
-1. apples
-2. bread
-
-Choose an option (1-6): 5
-Enter item to search for: apples
-'apples' is in your list at position 1.
-
-Choose an option (1-6): 6
-Goodbye!
-```
-
----
-
-## Problem 6: Prime Number Finder (Advanced Loops & Functions)
-**Concepts**: Functions, nested loops, conditionals, lists, mathematical logic
-
-Write a program that finds all prime numbers up to a given limit:
-1. Create a function `is_prime(n)` that returns True if n is prime, False otherwise
-2. Create a function `find_primes(limit)` that returns a list of all primes up to the limit
-3. Display the primes and count how many were found
-4. Also show the largest prime found
-
-**Example Input/Output:**
-```
-Enter the upper limit: 30
-
-Prime numbers up to 30:
-[2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
-
-Total primes found: 10
-Largest prime: 29
-```
-
-**Challenge Extension:** Implement the "Sieve of Eratosthenes" algorithm for better efficiency!
-
----
-
-## Problem 7: Text Adventure Game (All Concepts Combined)
-**Concepts**: All previous concepts integrated - functions, lists, loops, conditionals, variables
-
-Create a simple text-based adventure game:
-1. Player starts with 100 health and an empty inventory
-2. Present choices that affect health and inventory
-3. Use functions for different game scenarios
-4. Game ends when health reaches 0 or player finds the treasure
-5. Track and display game statistics
-
-**Example Structure:**
-```python
-def display_status(health, inventory):
-    # Show current health and inventory
-
-def forest_encounter(health, inventory):
-    # Handle forest scenario
+# 1. Variables and Basic Data Types
+# Write a function that takes a string parameter `name` and returns a greeting message:
+# "Hello, <name>!"
+def greet_user(name):
+    return "Hello, " + name + "!"
     
-def cave_encounter(health, inventory):
-    # Handle cave scenario
+    # Example:
+    # greet_user("Alice")  -> "Hello, Alice!"
+    # greet_user("Bob")    -> "Hello, Bob!"
+
+# 2. Conditionals (if/elif/else)
+# Write a function that takes a number `num` and returns:
+# "Positive" if num > 0,
+# "Negative" if num < 0,
+# "Zero" if num == 0
+def check_number(num):
+    if num > 0:
+        return "Positive"
+    elif num < 0:
+        return "Negative"
+    else:
+        return "Zero"
+
+    # Example:
+    # check_number(10)  -> "Positive"
+    # check_number(-3)  -> "Negative"
+    # check_number(0)   -> "Zero"
+
+# 3. For Loop
+# Write a function that takes a positive integer `n` and returns the sum of numbers from 1 to n.
+def sum_numbers(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i
+    return sum
+
+    # Example:
+    # sum_numbers(5) -> 15 (1+2+3+4+5)
+    # sum_numbers(3) -> 6  (1+2+3)
+
+# 4. While Loop
+# Write a function that takes a positive integer `n` and returns a list counting down from n to 1.
+def count_down(n):
+    result = []
+    while n > 0:
+        result.append(n)
+        n = n - 1
+    return result
+
+    # Example:
+    # count_down(5) -> [5, 4, 3, 2, 1]
+    # count_down(3) -> [3, 2, 1]
+
+
+# 5. Functions and Return Values
+# Write a function that returns True if a number is even, False if odd.
+def is_even(num):
+    if num % 2 == 0:
+        return True
+    else:
+        return False
     
-def main():
-    # Main game loop
-```
+    # Example:
+    # is_even(4) -> True
+    # is_even(7) -> False
 
-**Example Input/Output:**
-```
-=== Welcome to the Adventure Game! ===
-Health: 100 | Inventory: []
+# 6. Basic List Operations
+# Write a function that doubles each number in a list and returns the new list.
+def double_list(nums):
+    newList = []
+    for i in nums:
+        newList.append(i*2)
+    return newList
+    # Example:
+    # double_list([1, 2, 3]) -> [2, 4, 6]
+    # double_list([4, 0, -1]) -> [8, 0, -2]
 
-You find yourself at a crossroads.
-1. Enter the dark forest
-2. Explore the mysterious cave
-3. Rest by the river
-4. Check inventory
-5. Quit game
-
-Choose your action (1-5): 1
-
-You enter the dark forest and encounter a wolf!
-1. Fight the wolf (-20 health, gain 'wolf pelt')
-2. Run away (-5 health)
-
-Choose your action (1-2): 1
-You fought bravely! Health: 80 | Inventory: ['wolf pelt']
-
-[Game continues...]
-```
-
-## Tips for Success:
-1. Start with Problem 1 and work your way up
-2. Test your code with different inputs
-3. Use meaningful variable names
-4. Add comments to explain your logic
-5. Don't be afraid to break complex problems into smaller functions
-6. Remember that Python is case-sensitive and uses indentation for code blocks
-
-Good luck with your Python practice!
-"""
+# 7. Combining Lists and Conditionals
+# Write a function that returns a new list containing only the positive numbers from the input list.
+def filter_positive(nums):
+    newList = []
+    for i in nums:
+        if i > 0:
+            newList.append(i)
+    return newList
+    # Example:
+    # filter_positive([1, -2, 3, 0, -5]) -> [1, 3]
+    # filter_positive([-1, -2]) -> []
 
 # =============================================================================
 # PART 3: TESTING YOUR SOLUTIONS
 # =============================================================================
 
+# --- Test cases ---
 
-"""
-PROBLEM 1
-"""
+# 1. greet_user
+assert greet_user("Alice") == "Hello, Alice!"
+assert greet_user("Bob") == "Hello, Bob!"
+assert greet_user("") == "Hello, !"
+
+# 2. check_number
+assert check_number(10) == "Positive"
+assert check_number(-5) == "Negative"
+assert check_number(0) == "Zero"
+
+# 3. sum_numbers
+assert sum_numbers(5) == 15   # 1+2+3+4+5=15
+assert sum_numbers(1) == 1
+assert sum_numbers(0) == 0    # if you handle zero input
+
+# 4. count_down
+assert count_down(5) == [5, 4, 3, 2, 1]
+assert count_down(3) == [3, 2, 1]
+assert count_down(1) == [1]
+
+# 5. is_even
+assert is_even(4) == True
+assert is_even(7) == False
+assert is_even(0) == True
+
+# 6. double_list
+assert double_list([1, 2, 3]) == [2, 4, 6]
+assert double_list([0, -1]) == [0, -2]
+assert double_list([]) == []
+
+# 7. filter_positive
+assert filter_positive([1, -2, 3, 0, -5]) == [1, 3]
+assert filter_positive([-1, -2]) == []
+assert filter_positive([0, 5, 10]) == [5, 10]
+
+print("All tests passed!")
+
